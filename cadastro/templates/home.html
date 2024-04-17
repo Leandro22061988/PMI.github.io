@@ -1,0 +1,100 @@
+<!-- home.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        /* Estilos para a barra de navegação */
+        body {
+            background color: #fff
+        }
+        .navbar {
+            text-align: center; /* Centraliza os itens horizontalmente */
+            position: fixed; /* Torna a barra de navegação fixa */
+            top: 0; /* Posiciona a barra de navegação no topo da página */
+            width: 100%; /* Define a largura da barra de navegação como 100% da largura da tela */
+            background-color: #4464a3; /* Cor de fundo da barra de navegação */
+            padding: 10px 0; /* Espaçamento interno na barra de navegação */
+            z-index: 1000; /* Define a ordem de empilhamento para garantir que a barra de navegação esteja acima do conteúdo */
+        }
+        
+        .navbar a {
+            /* float: left; */ /* Remova essa linha */
+            display: inline-block; /* Faz com que os links fiquem em linha */
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px;
+            margin: 0 auto; /* Centraliza horizontalmente */
+        }
+        
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+
+        /* Estilos para o conteúdo */
+        .content {
+            padding: 50px;
+            text-align: center;
+        }
+
+        /* Estilos para as imagens */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            max-height: 400px;
+        }
+
+        /* Estilos para a mensagem e o texto */
+        .message {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+       
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="{% url 'home' %}">Início</a>
+    <a href="{% url 'upload_file' %}">Upload de Arquivo</a>
+    <a href="{% url 'cadastrar_pessoa' %}">Cadastrar novo Beneficiário</a>
+    <a href="{% url 'listar_pessoas' %}">Listar Beneficiários já cadastrados</a>
+    <a href="https://google.com">Análise de Dados</a>
+
+</div>
+
+<div class="content">
+    <h1>Aplicação de gerenciamento cadastral</h1>
+    
+    <div class="image-container">
+        <img src="{% static 'cadastro/img/rebuild.jpg' %}" alt="Imagem de exemplo">
+
+    </div>
+
+    <div class="message">
+        <h2>Acesso interno</h2>
+        <p>Bem vindo ao gerenciamento de cadastros dos beneficiários da ONG Círculo de Hospitalidade.</p>
+    </div>
+
+</div>
+
+
+
+</body>
+</html>

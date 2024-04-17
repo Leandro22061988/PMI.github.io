@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <style>
+        /* Estilo para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #4464a3;
+        }
+
+        /* Estilo para o contêiner */
+        .container {
+            text-align: center; /* Centraliza o conteúdo horizontalmente */
+            margin-top: 50px; /* Espaçamento superior */
+            margin-bottom: 30px; /* Espaçamento inferior */
+        }
+
+        /* Estilo para a imagem (logotipo) */
+        img.logo {
+            display: inline-block; /* Permite que a imagem e o texto fiquem na mesma linha */
+            margin-right: 5px; /* Espaçamento entre a imagem e o texto */
+            width: 200px; /* Largura da imagem (ajuste conforme necessário) */
+          
+            height: auto; /* Altura automática para manter a proporção */
+            vertical-align: middle; /* Alinha verticalmente com o texto */
+        }
+
+        /* Estilo para o título */
+        h1 {
+            display: inline-block; /* Permite que a imagem e o texto fiquem na mesma linha */
+            vertical-align: middle; /* Alinha verticalmente com a imagem */
+            color: #6686aa; /* Cor azul */
+            background-color: #f2f2f1;
+            padding: 15px;
+        }
+
+        /* Estilo para o formulário */
+        form {
+            width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 60px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo para os campos do formulário */
+        input[type="text"], input[type="email"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f2f2f1;
+        }
+
+        /* Estilo para o botão de cadastrar */
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #04066d;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Estilo para o botão de cadastrar quando hover */
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilo para as mensagens de erro */
+        .alert {
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .alert-danger {
+            color: #721c24; /* Cor do texto */
+            background-color: #f8d7da; /* Vermelho claro */
+            border: 1px solid #f5c6cb;
+        }
+        h2 {
+            tex-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="{% static 'cadastro/img/rebuild2.jpg' %}" alt="Logo" class="logo">
+        
+    </div>
+    
+    <form method="post">
+        <h2>Cadastrar novo Beneficiário</h2>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>

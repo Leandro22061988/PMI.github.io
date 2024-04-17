@@ -1,0 +1,81 @@
+<!-- upload_file.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload de Arquivo</title>
+    <style>
+        /* Estilo para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Altura total da viewport */
+        }
+
+        /* Estilo para o título */
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo para o formulário */
+        form {
+            width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        /* Estilo para o botão de enviar */
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px; /* Adiciona margem acima do botão */
+        }
+
+        /* Estilo para o botão de enviar quando hover */
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilo para o botão de voltar */
+        .btn-voltar {
+            width: 200px; /* Largura do botão */
+            padding: 10px;
+            background-color: #6c757d;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px; /* Adiciona margem acima do botão */
+            text-align: center;
+        }
+
+        /* Estilo para o botão de voltar quando hover */
+        .btn-voltar:hover {
+            background-color: #495057;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload de Arquivo</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Enviar</button>
+    </form>
+    <a href="{% url 'listar_pessoas' %}" class="btn-voltar">Voltar à Lista</a>
+</body>
+</html>

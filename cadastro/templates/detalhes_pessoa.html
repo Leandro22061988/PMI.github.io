@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes da Pessoa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 60%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4464a3;
+            color: #fff;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: blue;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-right: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            background-color: #049e04;
+            color: #fff;
+        }
+
+        .button.edit {
+            background-color: #007bff;
+        }
+
+        .button.delete {
+            background-color: #dc3545;
+        }
+
+        .icon {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Detalhes do Beneficiário</h1>
+    <table>
+        <tr>
+            <th>Informação</th>
+            <th>Dados</th>
+        </tr>
+        <tr>
+            <td><strong>Nome Completo:</strong></td>
+            <td>{{ pessoa.nome_completo }}</td>
+        </tr>
+        <tr>
+            <td><strong>Data de Nascimento:</strong></td>
+            <td>{{ pessoa.data_nascimento }}</td>
+        </tr>
+        <tr>
+            <td><strong>Idade:</strong></td>
+            <td>{{ pessoa.idade }}</td>
+        </tr>
+        <tr>
+            <td><strong>CPF:</strong></td>
+            <td>{{ pessoa.cpf }}</td>
+        </tr>
+        <tr>
+            <td><strong>Gênero:</strong></td>
+            <td>{{ pessoa.genero }}</td>
+        </tr>
+        <tr>
+            <td><strong>País de Origem:</strong></td>
+            <td>{{ pessoa.pais_origem }}</td>
+        </tr>
+        <tr>
+            <td><strong>Endereço Residencial - CEP:</strong></td>
+            <td>{{ pessoa.endereco_cep }}</td>
+        </tr>
+        <tr>
+            <td><strong>Endereço Residencial:</strong></td>
+            <td>{{ pessoa.endereco }}</td>
+        </tr>
+        <tr>
+            <td><strong>Bairro:</strong></td>
+            <td>{{ pessoa.bairro }}</td>
+        </tr>
+        <tr>
+            <td><strong>Cidade:</strong></td>
+            <td>{{ pessoa.cidade }}</td>
+        </tr>
+        <tr>
+            <td><strong>Estado:</strong></td>
+            <td>{{ pessoa.estado }}</td>
+        </tr>
+        <tr>
+            <td><strong>Telefone:</strong></td>
+            <td>{{ pessoa.telefone }}</td>
+        </tr>
+        <tr>
+            <td><strong>E-mail:</strong></td>
+            <td>{{ pessoa.email }}</td>
+        </tr>
+        <tr>
+            <td><strong>Situação Migratória:</strong></td>
+            <td>{{ pessoa.situacao_migratoria }}</td>
+        </tr>
+        <tr>
+            <td><strong>Atividade/Serviço Solicitado 1:</strong></td>
+            <td>{{ pessoa.atividade_servico_1 }}</td>
+        </tr>
+        <tr>
+            <td><strong>Atividade/Serviço Solicitado 2:</strong></td>
+            <td>{{ pessoa.atividade_servico_2 }}</td>
+        </tr>
+        <tr>
+            <td><strong>Atividade/Serviço Solicitado 3:</strong></td>
+            <td>{{ pessoa.atividade_servico_3 }}</td>
+        </tr>
+        <tr>
+            <td><strong>Atividade/Serviço Solicitado 4:</strong></td>
+            <td>{{ pessoa.atividade_servico_4 }}</td>
+        </tr>
+        <tr>
+            <td><strong>Atividade/Serviço Solicitado 5:</strong></td>
+            <td>{{ pessoa.atividade_servico_5 }}</td>
+        </tr>
+        <tr>
+            <td><strong>Status Migratório:</strong></td>
+            <td>{{ pessoa.status_migratorio }}</td>
+        </tr>
+        <tr>
+            <td><strong>Estado de Residência:</strong></td>
+            <td>{{ pessoa.estado_residencia }}</td>
+        </tr>
+        <tr>
+            <td><strong>Cidade de Residência:</strong></td>
+            <td>{{ pessoa.cidade_residencia }}</td>
+        </tr>
+        <tr>
+            <td><strong>Estado Civil:</strong></td>
+            <td>{{ pessoa.estado_civil }}</td>
+        </tr>
+        <tr>
+            <td><strong>Raça/Cor:</strong></td>
+            <td>{{ pessoa.raca_cor }}</td>
+        </tr>
+        <tr>
+            <td><strong>Escolaridade:</strong></td>
+            <td>{{ pessoa.escolaridade }}</td>
+        </tr>
+        <tr>
+            <td><strong>Área de Formação:</strong></td>
+            <td>{{ pessoa.area_formacao }}</td>
+        </tr>
+        <tr>
+            <td><strong>Nível de Português:</strong></td>
+            <td>{{ pessoa.nivel_portugues }}</td>
+        </tr>
+        <tr>
+            <td><strong>Carteira de Trabalho:</strong></td>
+            <td>{{ pessoa.carteira_trabalho }}</td>
+        </tr>
+        <tr>
+            <td><strong>Situação Laboral:</strong></td>
+            <td>{{ pessoa.situacao_laboral }}</td>
+        </tr>
+        <tr>
+            <td><strong>Renda Familiar Mensal:</strong></td>
+            <td>{{ pessoa.renda_familiar_mensal }}</td>
+        </tr>
+        <tr>
+            <td><strong>CPF Válido:</strong></td>
+            <td>{{ pessoa.cpf_valido }}</td>
+        </tr>
+        <tr>
+            <td><strong>Faixa de Renda:</strong></td>
+            <td>{{ pessoa.faixa_renda }}</td>
+        </tr>
+    </table>
+    <div class="button-container">
+        <a href="{% url 'listar_pessoas' %}" class="button"><i class="icon fas fa-arrow-left"></i> Voltar à Lista</a>
+        <a href="{% url 'editar_pessoa' pessoa.id %}" class="button edit"><i class="icon fas fa-pencil-alt"></i> Editar</a>
+        <a href="{% url 'excluir_pessoa' pessoa.id %}" class="button delete"><i class="icon fas fa-trash-alt"></i> Excluir</a>
+    </div>
+</body>
+</html>

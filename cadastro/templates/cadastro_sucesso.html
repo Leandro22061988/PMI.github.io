@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sucesso no Cadastro</title>
+    <style>
+        /* Estilo para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Estilo para o contêiner do sucesso */
+        .success-container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo para o ícone de sucesso */
+        .success-icon {
+            color: #28a745;
+            font-size: 48px;
+            text-align: center;
+        }
+
+        /* Estilo para o texto de sucesso */
+        .success-message {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Estilo para o botão de voltar */
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Estilo para o botão de voltar quando hover */
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-icon">&#10003;</div>
+        <div class="success-message">
+            <h2>Cadastro realizado com sucesso!</h2>
+            <p>Seu cadastro foi concluído com sucesso.</p>
+        </div>
+        <!-- Botão para voltar à lista -->
+        <a href="{% url 'listar_pessoas' %}" class="back-button">Voltar à lista</a>
+    </div>
+</body>
+</html>
