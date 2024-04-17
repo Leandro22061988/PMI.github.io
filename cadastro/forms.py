@@ -229,6 +229,8 @@ class PessoaForm(forms.ModelForm):
     situacao_laboral = forms.CharField(max_length=100, required=False, label='Situação Laboral')
     renda_familiar_mensal = forms.DecimalField(required=False, label='Renda Familiar Mensal')
     faixa_renda = forms.CharField(max_length=100, required=False, label='Faixa de Renda')
+    cpf = forms.CharField(max_length=11, label='CPF', widget=forms.TextInput(attrs={'placeholder': 'Digite apenas números'}))
+    consentimento = forms.BooleanField(label='Ao clicar no botão cadastrar, Concorda com o Consentimento *', required=True)
 
     class Meta:
         model = Pessoa

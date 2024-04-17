@@ -258,7 +258,7 @@ class Pessoa(models.Model):
     nome_completo = models.CharField(max_length=100,  verbose_name='Nome Completo')
     data_nascimento = models.DateField(verbose_name='Data de Nascimento')
     idade = models.IntegerField(null=True, blank=True, verbose_name='Idade')
-    cpf = models.CharField(max_length=11, default='', unique=True, verbose_name='CPF')
+    cpf = models.CharField(max_length=11, default='', unique=True, verbose_name='CPF', help_text='Digite apenas números')
     genero = models.CharField(max_length=20, choices=GENERO_CHOICES, default='Outro', verbose_name='Gênero')
     pais_origem = models.CharField(max_length=100, choices=PAIS_CHOICES, default="Desconhecido", verbose_name='País de Origem')
     endereco_cep = models.CharField(max_length=9, default='', verbose_name='Endereço Residencial - CEP')
