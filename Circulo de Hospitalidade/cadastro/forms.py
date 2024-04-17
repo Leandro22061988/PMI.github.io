@@ -1,6 +1,7 @@
 from django import forms
 from .models import Pessoa
 from django import forms
+from django.forms.widgets import CheckboxInput
 
 
 class PessoaForm(forms.ModelForm):
@@ -214,6 +215,10 @@ class PessoaForm(forms.ModelForm):
 
     genero = forms.ChoiceField(choices=GENERO_CHOICES, label='Gênero')
     pais_origem = forms.ChoiceField(choices=PAIS_CHOICES, label='País de Origem')
+    cpf = forms.CharField(max_length=11, label='CPF', widget=forms.TextInput(attrs={'placeholder': 'Digite apenas números'}))
+    consentimento = forms.BooleanField(label='Concordo com o Consentimento *', required=True)
+
+ 
 
     
     class Meta:
