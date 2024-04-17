@@ -32,7 +32,7 @@ Acesse a aplicação em seu navegador através do seguinte link:
 http://localhost:8000/
 
 Uso
-Para cadastrar uma nova pessoa, acesse a página de cadastro através do link "Cadastrar Pessoa" na página inicial.
+Para cadastrar uma nova pessoa, acesse a página de cadastro através do link "Cadastrar novo Beneficário" na página inicial.
 Para listar todas as pessoas cadastradas, acesse a página "Listar Pessoas".
 Para editar ou excluir uma pessoa, acesse a página de detalhes da pessoa e utilize os links correspondentes.
 Você também pode importar dados de um arquivo CSV ou Excel na página de upload de arquivo.
